@@ -1,0 +1,3 @@
+CREATE DATABASE MachineGame;
+use MachineGame;
+CREATE TABLE user(name varchar(100),password varchar(100));

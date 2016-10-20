@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    
+  <description>MyTag 1.0 core library</description>
+  <display-name>MyTag core</display-name>
+  <tlib-version>1.0</tlib-version>
+  <!--建议在jsp页面上使用的标签的前缀  -->
+  <short-name>lkd</short-name>
+  <!--作为tld文件的id,用来唯一标识当前的TLD文件，多个tld文件的URI不能重复
+  	通过jsp页面的taglib标签的uri属性来引用  -->
+  <uri>http://www.lkd.com/mytag/core</uri>
+  
+  <!--描述自定义的HelloSimpleTag标签  -->
+  <tag>
+  	<!--标签名的名字：在jsp页面上使用标签时的名字-->
+  	<name>hello</name>
+  	<!--标签所在的全类名-->
+  	<tag-class>com.lkd.tag.HelloSimpleTag</tag-class>
+  	<!--标签体的类型-->
+  	<body-content>empty</body-content>
+  	
+  	<attribute>
+  		<!--属性名-->
+  		<name>value</name>
+  		<!--该属性是否必须-->
+  		<required>true</required>
+  		<!--当前属性是否可以接受运行时表达式的动态值-->
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+   	<attribute>
+  		<!--属性名-->
+  		<name>count</name>
+  		<!--该属性是否必须-->
+  		<required>false</required>
+  		<!--当前属性是否可以接受运行时表达式的动态值-->
+  		<rtexprvalue>false</rtexprvalue>
+  	</attribute> 	
+  </tag>
+  <tag>
+  	<name>max</name>
+  	<tag-class>com.lkd.tag.MaxTag</tag-class>
+  	<body-content>empty</body-content>
+    	<attribute>
+	  		<!--属性名-->
+	  		<name>num1</name>
+	  		<!--该属性是否必须-->
+	  		<required>true</required>
+	  		<!--当前属性是否可以接受运行时表达式的动态值-->
+	  		<rtexprvalue>true</rtexprvalue>
+  		</attribute>  	
+    	<attribute>
+	  		<!--属性名-->
+	  		<name>num2</name>
+	  		<!--该属性是否必须-->
+	  		<required>true</required>
+	  		<!--当前属性是否可以接受运行时表达式的动态值-->
+	  		<rtexprvalue>true</rtexprvalue>
+  		</attribute>    		
+  </tag>
+  <tag>
+  	<name>readerFile</name>
+  	<tag-class>com.lkd.tag.ReadFileTag</tag-class>
+  	<body-content>empty</body-content>  	
+    	<attribute>
+	  		<name>src</name>
+	  		<required>true</required>
+	  		<rtexprvalue>true</rtexprvalue>
+  		</attribute>   	
+  </tag>
+  
+</taglib>
